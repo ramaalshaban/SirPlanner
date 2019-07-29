@@ -1,0 +1,20 @@
+<div class="example-container">
+    <div class="baslik">Title</div>
+    <input class="page-name" type="text" pInputText placeholder="Page Name">
+
+    <div class="baslik">Content</div>
+    <p-editor class="editor" [style]="{'height':'240px'}" placeholder="Content" [(ngModel)]="content"></p-editor>
+    
+
+    <div class="baslik">Upload File    </div>
+    <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload($event)" multiple="multiple" maxFileSize="5000000">
+        <ng-template pTemplate="content">
+            <ul *ngIf="uploadedFiles.length">
+                <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+            </ul>
+        </ng-template>
+    </p-fileUpload>
+
+    <button pButton type="button" class="add-btn" label="Add Info"></button>
+
+</div>

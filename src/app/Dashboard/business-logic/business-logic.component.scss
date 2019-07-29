@@ -1,0 +1,22 @@
+.example-card {
+  max-width: 100%;
+       
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+::ng-deep body .ui-card {
+  width: 90%;
+  
+}
+
+i {
+  float: right;
+  margin-top: -7%;
+}
+i:hover {
+  cursor: pointer;
+}

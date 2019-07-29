@@ -1,0 +1,16 @@
+<!-- Business -->
+<p-card  header="Question" subheader="{{ques.type}} - {{person.name}}" styleClass="ui-card-shadow " *ngFor="let ques of question" id="question">
+        <i class="pi pi-pencil" (click)="showEditPage('Question', ques.question)"></i>
+        <div>{{ques.question}}</div>
+        <p-footer>
+                <button pButton type="button" label="Answer" (click)="answerPage(ques.id, ques.type)" icon="pi pi-comment" class="ui-button-success" style="margin-right: .25em"></button>
+        </p-footer>
+</p-card>
+<!-- Technical -->
+<p-card  header="Question" subheader="{{ques.type}} - {{person.name}}" styleClass="ui-card-shadow " *ngFor="let ques of techquest" id="question">
+        <i class="pi pi-pencil" (click)="showEditPage()"></i>
+        <div>{{ques.question}}</div>
+        <p-footer>
+                <button pButton type="button" label="Answer" (click)="answerPage(ques.id, ques.type)" icon="pi pi-comment" class="ui-button-success" style="margin-right: .25em"></button>
+        </p-footer>
+</p-card>

@@ -1,0 +1,73 @@
+<div class="p-grid">
+    <div class="p-col-12">
+        <app-header></app-header>
+    </div>
+    <div class="p-col-2">
+        <app-left-menu></app-left-menu>
+    </div>
+    <div class="p-col-8">
+        <div class="p-col">
+            <div class="radio-buttons">
+                <p-checkbox class="items" name="groupname" value="BusinessLogic" label="Business Logic" [(ngModel)]="selectedValues" (onChange)="changeBusiness()"
+                    inputId="Business Logic "></p-checkbox>
+                <p-checkbox class="items" name="groupname" value="TechnicalAnalysis" label="Technical Analysis" [(ngModel)]="selectedValues"
+                    (onChange)="changeTechnical()" inputId="Techincal Analysis"></p-checkbox>
+                <p-checkbox class="items" name="groupname" value="Others" label="Others" [(ngModel)]="selectedValues" (onChange)="changeOthers()"
+                    inputId="Others"></p-checkbox>
+                <p-checkbox class="items" name="groupname" value="Files" label="Files" [(ngModel)]="selectedValues" (onChange)="changeFiles()"
+                    inputId="Files"></p-checkbox>
+                <p-checkbox class="items" name="groupname" value="Questions" label="Questions" [(ngModel)]="selectedValues" (onChange)="changeQuestion()"
+                    inputId="Questions"></p-checkbox>
+
+
+            </div>
+            <!-- <mat-radio-group class="radio-buttons">
+                <mat-radio-button class="items" routerLink="/business-logic" value="1" checked>Business Logic</mat-radio-button>
+                <mat-radio-button class="items" routerLink="/technical-analysis" value="2">Technical Analysis</mat-radio-button>
+                <mat-radio-button class="items" routerLink="/upload-file" value="3" #files>Files</mat-radio-button>
+            </mat-radio-group>
+            <mat-checkbox *ngIf="!files.checked" class="items" value="question" [checked]="question" (change)="changeCheckBox()">Questions/Comments</mat-checkbox>-->
+
+        </div>
+        <div class="p-col">
+            <app-active-questions *ngIf="question"></app-active-questions>
+        </div>
+        <div class="p-col">
+            <app-business-logic *ngIf="business"></app-business-logic>
+            <br/>
+            <app-technical-analysis *ngIf="technical"></app-technical-analysis>
+            <br/>
+            <app-upload-file *ngIf="files"></app-upload-file>
+
+        </div>
+
+    </div>
+    <div class="p-col-2">
+        <app-right-menu></app-right-menu>
+    </div>
+</div>
+
+
+<!--Angular Material Grid 
+<mat-grid-list cols="12" rows="5.5" > 
+    <mat-grid-tile [colspan]="12" [rowspan]="1" style="background-color: blue">
+
+        HEADER
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="4.5" style="background-color: red">
+
+        Left Menu
+    </mat-grid-tile>
+    
+    <mat-grid-tile [colspan]="8" [rowspan]="4.5" style="background-color: darkgrey">
+
+        Dashboard
+    </mat-grid-tile>
+    
+    <mat-grid-tile [colspan]="2" [rowspan]="4.5" style="background-color: white">
+
+            Right Menu
+    </mat-grid-tile>
+    
+
+</mat-grid-list> -->

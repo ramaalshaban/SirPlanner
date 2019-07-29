@@ -1,0 +1,31 @@
+.radio-buttons {
+    margin-left: 5%;
+    justify-content: space-between;
+}
+.items {
+    margin-left: 10%;
+} 
+:host ::ng-deep button {
+    margin-right: .25em;
+}
+
+:host ::ng-deep .custom-toast .ui-toast-message {
+    color: #ffffff;
+    background: #FC466B;
+    background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);
+    background: linear-gradient(to right, #3F5EFB, #FC466B);
+}
+
+:host ::ng-deep .custom-toast .ui-toast-close-icon {
+    color: #ffffff;
+}
+
+.btnDelete {
+    float: right;
+    margin-right: 15%;
+}
+.addBtn{
+    //float: left;
+    margin-left: 45%;
+    margin-bottom: 5%;
+}

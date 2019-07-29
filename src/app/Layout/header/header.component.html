@@ -1,0 +1,10 @@
+<mat-toolbar style="justify-content: space-between;">
+    <div class="logo-div">
+        <img class="logo" src="../../../favicon.ico" alt="">
+
+    </div>
+    <div class="user">
+        <p-splitButton label='{{userName}}' (onClick)="save('info')" [model]="items" styleClass="ui-button-secondary"></p-splitButton>
+
+    </div>
+</mat-toolbar>

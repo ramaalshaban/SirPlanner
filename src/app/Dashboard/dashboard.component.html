@@ -1,0 +1,54 @@
+<div class="p-col-12">
+    <div class="baslik" *ngIf="!deleteButton">Page Name</div>
+    <div class="radio-buttons" *ngIf="!deleteButton">
+        <p-checkbox class="items" name="groupname" value="BusinessLogic" label="Business Logic" [(ngModel)]="selectedValues" (onChange)="changeBusiness()"
+            inputId="Business Logic "></p-checkbox>
+        <p-checkbox class="items" name="groupname" value="TechnicalAnalysis" label="Technical Analysis" [(ngModel)]="selectedValues"
+            (onChange)="changeTechnical()" inputId="Techincal Analysis"></p-checkbox>
+        <p-checkbox class="items" name="groupname" value="Others" label="Others" [(ngModel)]="selectedValues" (onChange)="changeOthers()"
+            inputId="Others"></p-checkbox>
+        <p-checkbox class="items" name="groupname" value="Files" label="Files" [(ngModel)]="selectedValues" (onChange)="changeFiles()"
+            inputId="Files"></p-checkbox>
+        <p-checkbox class="items" name="groupname" value="Questions" label="Questions" [(ngModel)]="selectedValues" (onChange)="changeQuestion()"
+            inputId="Questions"></p-checkbox>
+    </div>
+</div>
+<div class="p-col-12">
+    <app-active-questions *ngIf="question"></app-active-questions>
+</div>
+
+<div class="p-col-12">
+    <router-outlet></router-outlet>
+
+    <app-business-logic *ngIf="business && businessLogic != null"></app-business-logic>
+    <button type="button" pButton label="Add Business Logic" class="addBtn" *ngIf="businessLogic == null && !deleteButton" (click)="addArticle('Business Logic')"></button>
+
+    <br/>
+
+    <app-technical-analysis *ngIf="technical  && technicalAnalysis != null"></app-technical-analysis>
+    <button type="button" pButton label="Add Techincal Analysis" class="addBtn" *ngIf="technicalAnalysis == null && !deleteButton"
+        (click)="addArticle('Technical Analysis')"></button>
+
+    <br/>
+    <app-upload-file *ngIf="files"></app-upload-file>
+
+    <p-toast position="center" key="c" (onClose)="onReject()" [modal]="true" [baseZIndex]="5000">
+        <ng-template let-message pTemplate="message">
+            <div style="text-align: center">
+                <i class="pi pi-exclamation-triangle" style="font-size: 3em"></i>
+                <h3>{{message.summary}}</h3>
+                <p>{{message.detail}}</p>
+            </div>
+            <div class="ui-g ui-fluid">
+                <div class="ui-g-6">
+                    <button type="button" pButton (click)="onConfirm()" label="Yes" class="ui-button-success"></button>
+                </div>
+                <div class="ui-g-6">
+                    <button type="button" pButton (click)="onReject()" label="No" class="ui-button-secondary"></button>
+                </div>
+            </div>
+        </ng-template>
+    </p-toast>
+
+    <button *ngIf="!deleteButton" type="button" pButton (click)="showConfirm()" label="Delete Page" class="ui-button-rounded ui-button-danger btnDelete"></button>
+</div>

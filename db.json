@@ -1,0 +1,211 @@
+{
+  "project": [
+    {
+      "id": 1,
+      "projectName": "AtmoDataZone"
+    },
+    {
+      "id": 2,
+      "projectName": "Trello"
+    },
+    {
+      "id": 3,
+      "projectName": "SpaceX"
+    },
+    {
+      "id": 4,
+      "projectName": "3.HavaLimanı"
+    },
+    {
+      "id": 5,
+      "projectName": "Akkuyu Nükleer Santrali"
+    }
+  ],
+  "page": [
+    {
+      "id": 1,
+      "pageName": "MDE-BDE",
+      "projectId": 1
+    },
+    {
+      "id": 2,
+      "pageName": "Maintenance",
+      "projectId": 1
+    },
+    {
+      "id": 3,
+      "pageName": "Prod-Datas",
+      "projectId": 1
+    },
+    {
+      "id": 4,
+      "pageName": "Ahmet Mehmet",
+      "projectId": 2
+    },
+    {
+      "id": 5,
+      "pageName": "Veli",
+      "projectId": 2
+    },
+    {
+      "id": 6,
+      "pageName": "Aşe",
+      "projectId": 2
+    }
+  ],
+  "discussion": [
+    {
+      "id": 1,
+      "name": "Time Out ",
+      "projectId": 1
+    },
+    {
+      "id": 2,
+      "name": "Productivity ",
+      "projectId": 2
+    }
+  ],
+  "other": [
+    {
+      "id": 1,
+      "name": "Daily Report ",
+      "projectId": 1
+    },
+    {
+      "id": 2,
+      "name": "General Information ",
+      "projectId": 2
+    }
+  ],
+  "bussinessLogic": [
+    {
+      "id": 1,
+      "content": "Time Out ",
+      "pageId": 1,
+      "personId":1,
+      "questions":[
+        {
+          "id":1,
+          "question":"Ahmet bugun nerede?",
+          "type":"Business Logic",
+          "personId":3,
+          "answers":[
+            {
+              "id":1,
+              "answer":"California"
+            }
+          ]
+        },
+        {
+          "id":2,
+          "question":"what time is it?",
+          "type":"Business Logic",
+          "personId":2,
+          "answers":[
+            {
+              "id":1,
+              "answer":"9.13pm"
+            }
+          ]
+        }
+      ],
+      "files":[
+        {
+          "id":1,
+          "path":"varda gözükmüyor"
+        }
+      ]
+    }
+  ],
+  "technicalAnalysis": [
+    {
+      "id": 1,
+      "content": "Shiba kohuma akoito dıyologo delgado ",
+      "pageId": 1,
+      "personId":2,
+      "questions":[
+        {
+          "id":1,
+          "question":"Ahmetin Ram'ini kim çaldı?",
+          "type":"Technical Analysis",
+          "personId":2,
+          "answers":[
+            {
+              "id":1,
+              "answer":"John bugun kasa söküyordu ? o olabilir mi ?"
+            }
+          ]
+        },
+        {
+          "id":2,
+          "question":"Code First kullanmayan personel muhasebeye ugradı mı ?",
+          "type":"Technical Analysis",
+          "personId":2,
+          "answers":[
+            {
+              "id":1,
+              "answer":"Dilekçeyi hazırlıyor"
+            }
+          ]
+        }
+      ],
+      "files":[
+        {
+          "id":1,
+          "path":"varda gözükmüyor"
+        }
+      ]
+    }
+  ],
+  "person":[
+    {
+      "id":1,
+      "name":"Abdullah Özkılıç",
+      "projectId":1,
+      "departmentId":1
+    },
+    {
+      "id":2,
+      "name":"İbrahim Doğruer",
+      "projectId":1,
+      "departmentId":2
+    },
+    {
+      "id":3,
+      "name":"Ebubekir Rüzgar",
+      "projectId":1,
+      "departmentId":3
+    }
+    
+  ],
+  "group":[
+    {
+      "id":1,
+      "groupName":"Kırkharamiler",
+      "persons": [
+        {"id":1, "personId":1},
+        {"id":1, "personId":2},
+        {"id":1, "personId":3}
+      ]
+    },
+    {
+      "id":2,
+      "groupName":"Red Phoenix",
+      "persons": []
+    }
+  ],
+  "department": [
+    {
+      "id": 1,
+      "departmanName": "Menager"
+    },
+    {
+      "id": 2,
+      "departmanName": "Developer"
+    },
+    {
+      "id": 3,
+      "departmanName": "User"
+    }
+  ]
+}

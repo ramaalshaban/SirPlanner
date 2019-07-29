@@ -1,0 +1,27 @@
+<!-- <mat-list *ngFor="let file of files">
+
+    <mat-card class="example-card">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{file.kullaniciAdi}}</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="img">
+                <img src={{file.img}} style="width: 70px; height: 100px;" alt="">
+                <br/> {{file.fileName}}
+            </div>
+        </mat-card-content>
+    </mat-card>
+
+</mat-list> -->
+
+<p-card header="{{file.UserName}}" subheader="{{file.type}}" styleClass="ui-card-shadow " *ngFor="let file of files">
+ 
+    <div class="img">
+        <img src={{file.img}} style="width: 70px; height: 100px;" alt="">
+        <br/> {{file.fileName}}
+    </div>
+  
+
+</p-card>
