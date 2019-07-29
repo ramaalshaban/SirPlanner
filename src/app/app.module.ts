@@ -29,6 +29,8 @@ import {EditorModule} from 'primeng/editor';
 import {FileUploadModule} from 'primeng/fileupload';
 import {ToastModule} from 'primeng/toast';
 import {ChipsModule} from 'primeng/chips';
+import {DragDropModule} from 'primeng/dragdrop';
+import {TableModule} from 'primeng/table';
 
 
 
@@ -127,7 +129,9 @@ import {LayoutComponent} from './Layout/layout.component'
     EditorModule,
     FileUploadModule,
     ToastModule,
-    ChipsModule
+    ChipsModule,
+    DragDropModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent],
