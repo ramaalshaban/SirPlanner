@@ -1,6 +1,6 @@
 .example-card {
-    max-width: 700px;
-    margin-left: 22%;      
+    max-width: 100%;
+          
   }
   
   .example-header-image {
@@ -9,8 +9,9 @@
   }
 
   ::ng-deep body .ui-card {
-    width: 70%;
-    margin-left: 15%;
+    width: 90%;
+    margin-left: 10%;
+    
   }
   i {
     float: right;

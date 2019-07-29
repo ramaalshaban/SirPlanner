@@ -1,10 +1,8 @@
 .example-container {
     display: flex;
     flex-direction: column;
-    width: 600px;
-    height: 400px;
-  }
-  
+   
+  }  
   .editor {
     width: 100%;
     margin-top: 2%;
@@ -19,5 +17,10 @@
     margin-left: 35%;
     margin-top: 3%;
     width: 30%;
-    height: 50px;
+    height: 100%;
+  }
+  .answer-style {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
   }

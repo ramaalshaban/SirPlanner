@@ -1,21 +1,23 @@
-<div class="p-col">
+<div class="p-col-12">
     <div class="baslik" *ngIf="!deleteButton">Page Name</div>
-    <div class="checkboxes" *ngIf="!deleteButton">
+    <div class="radio-buttons" *ngIf="!deleteButton">
         <p-checkbox class="items" name="groupname" value="BusinessLogic" label="Business Logic" [(ngModel)]="selectedValues" (onChange)="changeBusiness()"
             inputId="Business Logic "></p-checkbox>
         <p-checkbox class="items" name="groupname" value="TechnicalAnalysis" label="Technical Analysis" [(ngModel)]="selectedValues"
             (onChange)="changeTechnical()" inputId="Techincal Analysis"></p-checkbox>
+        <p-checkbox class="items" name="groupname" value="Others" label="Others" [(ngModel)]="selectedValues" (onChange)="changeOthers()"
+            inputId="Others"></p-checkbox>
         <p-checkbox class="items" name="groupname" value="Files" label="Files" [(ngModel)]="selectedValues" (onChange)="changeFiles()"
             inputId="Files"></p-checkbox>
         <p-checkbox class="items" name="groupname" value="Questions" label="Questions" [(ngModel)]="selectedValues" (onChange)="changeQuestion()"
             inputId="Questions"></p-checkbox>
     </div>
 </div>
-<div class="p-col">
+<div class="p-col-12">
     <app-active-questions *ngIf="question"></app-active-questions>
 </div>
 
-<div class="p-col">
+<div class="p-col-12">
     <router-outlet></router-outlet>
 
     <app-business-logic *ngIf="business && businessLogic != null"></app-business-logic>

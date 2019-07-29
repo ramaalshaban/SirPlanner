@@ -3,9 +3,9 @@
     <input class="page-name" type="text" pInputText placeholder="Page Name">
 
     <div class="baslik">Business Logic</div>
-    <p-editor class="editor" [style]="{'height':'240px'}" placeholder="Business Logic" [(ngModel)]="business"></p-editor>
+    <p-editor class="editor" [style]="{'height':'200px'}" placeholder="Business Logic" [(ngModel)]="business"></p-editor>
     <div class="baslik">Technical Analysis</div>
-    <p-editor class="editor" [style]="{'height':'240px'}" placeholder="Technical Analysis" [(ngModel)]="technical"></p-editor>
+    <p-editor class="editor" [style]="{'height':'200px'}" placeholder="Technical Analysis" [(ngModel)]="technical"></p-editor>
 
     <div class="baslik">Dosya Yükle</div>
     <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload($event)" multiple="multiple" maxFileSize="5000000">
