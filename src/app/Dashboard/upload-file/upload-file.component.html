@@ -1,8 +1,8 @@
-<p-card header="{{file.UserName}}" subheader="{{file.type}}" styleClass="ui-card-shadow " *ngFor="let file of files">
+<p-card header="{{file.userName}}" subheader="{{file.baslik}}" styleClass="ui-card-shadow " *ngFor="let file of files">
 
     <div class="img">
-        <img src={{file.img}} style="width: 70px; height: 100px;" alt="">
-        <br/> {{file.fileName}}
+        <img src={{file.path}} class="imgFile" alt="">
+        <br/> {{file.fileName}} Belgesi
     </div>
 
 </p-card>

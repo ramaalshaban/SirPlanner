@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AnswerComponent } from '../answer/answer.component';
-import { MatDialog } from '../../../../node_modules/@angular/material';
+import { MatDialog } from '@angular/material';
 import { EditPageComponent } from '../edit-page/edit-page.component';
-import { HttpClient } from '../../../../node_modules/@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-active-questions',
@@ -30,17 +30,18 @@ export class ActiveQuestionsComponent implements OnInit {
         this.person = data;
       });
 
+    });
+    
+    this.http.get<any>("http://localhost:3000/technicalAnalysis").subscribe(data => {
+      this.technical = data;
+      this.techquest = this.technical[0].questions
 
-      this.http.get<any>("http://localhost:3000/technicalAnalysis").subscribe(data => {
-        this.technical = data;
-        this.techquest = this.technical[0].questions
 
-
-        this.http.get<any>("http://localhost:3000/person/" + this.techquest[0].personId).subscribe(data => {
-          this.person = data;
-        });
+      this.http.get<any>("http://localhost:3000/person/" + this.techquest[0].personId).subscribe(data => {
+        this.person = data;
       });
     });
+
 
 
   }

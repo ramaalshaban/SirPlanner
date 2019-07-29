@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '../../../../node_modules/@angular/material';
+import { MatDialog } from '@angular/material';
 import { EditPageComponent } from '../edit-page/edit-page.component';
 import { AskQuestionComponent } from '../ask-question/ask-question.component';
-import { HttpClient } from '../../../../node_modules/@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-business-logic',

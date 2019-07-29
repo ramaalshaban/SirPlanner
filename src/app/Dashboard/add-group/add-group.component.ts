@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { HttpClient } from '../../../../node_modules/@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-add-group',

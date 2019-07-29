@@ -19,6 +19,10 @@
     {
       "id": 5,
       "projectName": "Akkuyu Nükleer Santrali"
+    },
+    {
+      "id": 6,
+      "projectName": "NEURALINK"
     }
   ],
   "page": [
@@ -35,21 +39,6 @@
     {
       "id": 3,
       "pageName": "Prod-Datas",
-      "projectId": 1
-    },
-    {
-      "id": 4,
-      "pageName": "Ahmet Mehmet",
-      "projectId": 2
-    },
-    {
-      "id": 5,
-      "pageName": "Veli",
-      "projectId": 2
-    },
-    {
-      "id": 6,
-      "pageName": "Aşe",
       "projectId": 2
     }
   ],
@@ -80,39 +69,37 @@
   "bussinessLogic": [
     {
       "id": 1,
-      "content": "Time Out ",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!",
       "pageId": 1,
       "personId":1,
       "questions":[
         {
           "id":1,
-          "question":"Ahmet bugun nerede?",
+          "question":"Lorem ipsum dolor sit amet, consectetur adipisicing elit?",
           "type":"Business Logic",
           "personId":3,
           "answers":[
             {
               "id":1,
-              "answer":"California"
+              "answer":"Dolor sit amet, consectetur adipisicing. ",
+              "questionId": 1,
+              "personId": 3
             }
           ]
         },
         {
           "id":2,
-          "question":"what time is it?",
+          "question":"Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis?",
           "type":"Business Logic",
           "personId":2,
           "answers":[
             {
               "id":1,
-              "answer":"9.13pm"
+              "answer":"Ipsum dolor sit amet. ",
+              "questionId": 2,
+              "personId": 2
             }
           ]
-        }
-      ],
-      "files":[
-        {
-          "id":1,
-          "path":"varda gözükmüyor"
         }
       ]
     }
@@ -120,31 +107,35 @@
   "technicalAnalysis": [
     {
       "id": 1,
-      "content": "Shiba kohuma akoito dıyologo delgado ",
+      "content": "Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, ",
       "pageId": 1,
       "personId":2,
       "questions":[
         {
-          "id":1,
-          "question":"Ahmetin Ram'ini kim çaldı?",
+          "id":3,
+          "question":"Culpa ratione quam perferendis esse, cupiditate neque quas?",
           "type":"Technical Analysis",
           "personId":2,
           "answers":[
             {
               "id":1,
-              "answer":"John bugun kasa söküyordu ? o olabilir mi ?"
+              "answer":"Deserunt quisquam repellat libero",
+              "questionId": 3,
+              "personId": 2
             }
           ]
         },
         {
-          "id":2,
-          "question":"Code First kullanmayan personel muhasebeye ugradı mı ?",
+          "id":4,
+          "question":"Numquam deserunt quisquam repellat libero asperiores earum nam nobis?",
           "type":"Technical Analysis",
           "personId":2,
           "answers":[
             {
               "id":1,
-              "answer":"Dilekçeyi hazırlıyor"
+              "answer":"Cupiditate neque quas!",
+              "questionId": 4,
+              "personId": 2
             }
           ]
         }
@@ -152,7 +143,7 @@
       "files":[
         {
           "id":1,
-          "path":"varda gözükmüyor"
+          "path":"-"
         }
       ]
     }
@@ -206,6 +197,29 @@
     {
       "id": 3,
       "departmanName": "User"
+    }
+  ], 
+  "file": [
+    {
+      "id": 1,
+      "userName":"Ebubekir",
+      "fileName":"PDF",
+      "baslik":"İşlem Mantığı",
+      "path": "../../../assets/pdf.png"
+    },
+    {
+      "id": 2,
+      "userName":"Abdullah Özkılıç",
+      "fileName":"HTML",
+      "baslik":"İşlem ",
+      "path": "../../../assets/html.png"
+    },
+    {
+      "id": 3,
+      "fileName":"WORD",   
+       "userName":"İbrahim ",
+       "baslik":" Mantık",
+      "path":  "../../../assets/word.png"
     }
   ]
 }

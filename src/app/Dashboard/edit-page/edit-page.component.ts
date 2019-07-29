@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '../../../../node_modules/@angular/material';
-import { HttpClient } from '../../../../node_modules/@angular/common/http';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-edit-page',

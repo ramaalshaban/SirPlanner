@@ -5,7 +5,10 @@ import { AddPageComponent } from '../../Dashboard/add-page/add-page.component';
 import { AddGroupComponent } from '../../Dashboard/add-group/add-group.component';
 import { AddPersonComponent } from '../../Dashboard/add-person/add-person.component';
 import { HttpClient } from '@angular/common/http';
-import { Person } from './Person';
+import { Person } from '../../Models/Person';
+import { Group } from '../../Models/Group';
+import { GroupService } from '../../Services/group.service';
+import { PersonService } from '../../Services/person.service';
 
 @Component({
   selector: 'app-right-menu',
@@ -14,11 +17,13 @@ import { Person } from './Person';
 })
 export class RightMenuComponent implements OnInit {
 
-  constructor(private dialog: MatDialog, private http: HttpClient) { }
+  constructor(private dialog: MatDialog,
+              private groupService:GroupService,
+              private personService:PersonService) { }
 
-  items: MenuItem[];
+  items: MenuItem | MenuItem[];
   persons: Person[];
-  groups = []
+  groups : Group[];
 
   onCreatePerson() {
     this.dialog.open(AddPersonComponent);
@@ -27,35 +32,46 @@ export class RightMenuComponent implements OnInit {
   onCreateGroup() {
     this.dialog.open(AddGroupComponent);
   }
+  
+  //kişileri çekip menu item'a ekliyoruz
+  getPerson(){
+      this.personService.getPerson().subscribe(data=>{
+        this.persons = data;
+        this.persons.map(person => {
+          this.items[0].items.push({ label: person.name, value: person.id })
+        })
+        this.items[0].items.push({ label: 'Add Person', icon: 'pi pi-plus', command: () => this.onCreatePerson() });
+      })
+  }
+
+  //grupları çekip menu item'a ekliyoruz
+  getGroup(){
+    this.groupService.getGroup().subscribe(data=>{
+      this.groups = data;
+      this.groups.map(group => {
+        this.items[1].items.push({ label: group.groupName, value: group.id })
+      })
+      this.items[1].items.push({ label: 'Add Group', icon: 'pi pi-plus', command: () => this.onCreateGroup() });
+    })
+  }
+
   ngOnInit() {
 
-    this.http.get<Person[]>("http://localhost:3000/person").subscribe(data => {
-      this.persons = data;
+    this.getPerson();
+    this.getGroup();
 
-      this.http.get<any>("http://localhost:3000/group").subscribe(data => {
-        this.groups = data;
 
-        this.items = [{
-
-          label: 'Persons',
-          items: [
-            { label: this.persons[0].name },
-            { label: this.persons[1].name },
-            { label: this.persons[2].name },
-            { label: 'Add Person', icon: 'pi pi-plus', command: () => this.onCreatePerson() }
-          ]
-        },
-        {
-          label: 'Groups',
-          items: [
-            { label: this.groups[0].groupName },
-            { label: this.groups[1].groupName },
-            { label: 'Add Group', icon: 'pi pi-plus', command: () => this.onCreateGroup() }
-          ]
-        }];
-
-      });
-    });
+    //menu items
+    this.items = [
+      {
+        label: 'Persons',
+        items: []
+      },
+      {
+        label: 'Groups',
+        items: []
+      }
+    ];
   }
 
 

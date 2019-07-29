@@ -1,12 +1,12 @@
 .example-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
+    width: 800px;
+    height: 580px;
   }
   
   .page-name {
-    width: 100%;
+    width: 30%;
     margin-bottom: 2%;
   }
   .editor {
@@ -20,8 +20,8 @@
     font-weight: bold;
   }
   .add-btn {
-    margin-left: 15%;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    width: 70%;
+    margin-left: 35%;
+    margin-top: 2%;
+    width: 30%;
+    height: 50px; 
   }

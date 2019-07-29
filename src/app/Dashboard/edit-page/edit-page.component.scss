@@ -1,7 +1,8 @@
 .example-container {
   display: flex;
   flex-direction: column;
- 
+  width: 1000px;
+  height: 600px;
 }
 
 .editor {
@@ -15,7 +16,8 @@
   font-weight: bold;
 }
 .add-btn {
-  left: 25%;
-  margin-top: 5%;
-  width: 50%;
+  margin-left: 35%;
+  margin-top: 3%;
+  width: 30%;
+  height: 50px;
 }
