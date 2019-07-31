@@ -31,6 +31,8 @@ import {ToastModule} from 'primeng/toast';
 import {ChipsModule} from 'primeng/chips';
 import {DragDropModule} from 'primeng/dragdrop';
 import {TableModule} from 'primeng/table';
+import {ListboxModule} from 'primeng/listbox';
+import {PickListModule} from 'primeng/picklist';
 
 
 
@@ -67,7 +69,8 @@ import { AddNewInfoComponent } from './Dashboard/add-new-info/add-new-info.compo
 import { AddNewDiscussionComponent } from './Dashboard/add-new-discussion/add-new-discussion.component';
 import { AddArticleComponent } from './Dashboard/add-article/add-article.component';
 import{DashboardComponent} from './Dashboard/dashboard.component'
-import {LayoutComponent} from './Layout/layout.component'
+import {LayoutComponent} from './Layout/layout.component';
+
 
 @NgModule({
   declarations: [
@@ -90,7 +93,8 @@ import {LayoutComponent} from './Layout/layout.component'
     AddNewDiscussionComponent,
     AddArticleComponent,
     DashboardComponent,
-    LayoutComponent
+    LayoutComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -132,7 +136,9 @@ import {LayoutComponent} from './Layout/layout.component'
     ToastModule,
     ChipsModule,
     DragDropModule,
-    TableModule
+    TableModule,
+    ListboxModule,
+    PickListModule
   ],
   providers: [],
   bootstrap: [AppComponent],
