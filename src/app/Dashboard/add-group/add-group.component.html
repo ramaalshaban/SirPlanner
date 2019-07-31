@@ -1,44 +1,52 @@
-
-<div class="ui-g">
-    <div class="ui-g-12 ui-md-6 ui-g-nopad drag-column" >
-        <ul style="margin:0;padding:0">
-            <p-table [value]="availablePerson"  >
+<div class="example-container">
+        <div class="ui-g-12 ui-g-nopad drag-column">
+            <p class=" groupname">Group Name:</p>
+            <p-chips  [(ngModel)]="GrupName">Group Name :</p-chips>
+        </div>
+        
+        <div class="ui-g-12 ui-md-6 ui-g-nopad drag-column">
+            <ul style="margin:0;padding:0">
+                <p-table [value]="availablePerson">
+                    <ng-template pTemplate="header">
+                        <tr>
+    
+                            <th>Name</th>
+    
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-person>
+                        <tr>
+                            <td class="ui-helper-clearfix" pDraggable="person" (onDragStart)="dragStart($event,person)"
+                                (onDragEnd)="dragEnd($event)">{{person.name}}</td>
+    
+                        </tr>
+                    </ng-template>
+                </p-table>
+    
+            </ul>
+        </div>
+        <div class="ui-g-12 ui-md-6 ui-g-nopad drop-column " pDroppable="person" (onDrop)="drop($event)"
+            [ngClass]="{'ui-highlight-person':draggedPerson}">
+            <p-table [value]="selectedPerson">
                 <ng-template pTemplate="header">
                     <tr>
-                        
+    
                         <th>Name</th>
-                        
+    
                     </tr>
                 </ng-template>
-                <ng-template pTemplate="body" let-person >
-                    <tr >                        
-                        <td class="ui-helper-clearfix" pDraggable="person"
-                        (onDragStart)="dragStart($event,person)" (onDragEnd)="dragEnd($event)" >{{person.name}}</td>
-                                                
+                <ng-template pTemplate="body" let-person>
+                    <tr>
+    
+                        <td>{{person.name}}</td>
+    
                     </tr>
                 </ng-template>
             </p-table>
-           
-        </ul>
-    </div>
-    <div class="ui-g-12 ui-md-6 drop-column" pDroppable="person" 
-        (onDrop)="drop($event)" [ngClass]="{'ui-highlight-person':draggedPerson}">
-        <p-table [value]="selectedPerson">
-            <ng-template pTemplate="header">
-                <tr>
-                    
-                    <th>Name</th>
-                    
-                </tr>
-            </ng-template>
-            <ng-template pTemplate="body" let-person>
-                <tr>
-                    
-                    <td>{{person.name}}</td>
-                    
-                </tr>
-            </ng-template>
-        </p-table>
-    </div>
+        </div>
     
-</div>
+        
+    </div>
+    <button pButton type="button" class="add-btn" label="Add Group"></button>
+    
+    

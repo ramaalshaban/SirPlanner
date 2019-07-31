@@ -123,8 +123,8 @@ export class LeftMenuComponent implements OnInit {
 
     //yeni item ekleme olayı
     this.items[0].items = [{ label: 'Add New Discussion', icon: 'pi pi-plus', command: () => this.onCreateDiscussion() }];
-    this.items[1].items = [{ label: 'Add New Page', icon: 'pi pi-plus', command: () => this.onCreateDiscussion() }];
-    this.items[2].items = [{ label: 'Add New Info', icon: 'pi pi-plus', command: () => this.onCreateDiscussion() }];
+    this.items[1].items = [{ label: 'Add New Page', icon: 'pi pi-plus', command: () => this.onCreatePage() }];
+    this.items[2].items = [{ label: 'Add New Info', icon: 'pi pi-plus', command: () => this.onCreateOther() }];
   }
 
 }
