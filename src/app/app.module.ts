@@ -99,7 +99,8 @@ import {LayoutComponent} from './Layout/layout.component'
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpModule,
-    HttpClientModule,
+    HttpClientModule, 
+    
     
     //angular material
     MatCardModule,
