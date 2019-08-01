@@ -19,9 +19,27 @@
     width: 100%;}
 
   .groupname{
-    text-align: center;
+    text-align: left;
+    width: 10%;
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+  .grouppanel{
+    width: 90%;
+    
+  }
+  .picklist{
+    font-size:14px;
+    float:left;
+    margin:5px 2px 0 0;
+    width: 50%;
+
   }
   ::ng-deep .cdk-overlay-pane{
-  max-width: 60% !important;
+  max-width: 70% !important;
   }
+
   

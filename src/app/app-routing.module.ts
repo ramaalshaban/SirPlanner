@@ -7,13 +7,15 @@ import { UploadFileComponent } from './Dashboard/upload-file/upload-file.compone
 import { DashboardComponent } from './Dashboard/dashboard.component';
 
 
+
 const routes: Routes = [
   {path:'' ,component:DashboardComponent, pathMatch:'full'},
   {path:'business-logic' , component:BusinessLogicComponent},
   {path:'active-question' , component:ActiveQuestionsComponent},  
   {path:'technical-analysis' , component:TechnicalAnalysisComponent},
   {path:'upload-file' , component:UploadFileComponent},
-  {path:'dashboard',component:DashboardComponent}
+  {path:'dashboard',component:DashboardComponent},
+
 
 ];
 
