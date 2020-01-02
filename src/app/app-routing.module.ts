@@ -8,6 +8,7 @@ import { DashboardComponent } from './Dashboard/dashboard.component';
 
 
 
+
 const routes: Routes = [
   {path:'' ,component:DashboardComponent, pathMatch:'full'},
   {path:'business-logic' , component:BusinessLogicComponent},
@@ -15,6 +16,8 @@ const routes: Routes = [
   {path:'technical-analysis' , component:TechnicalAnalysisComponent},
   {path:'upload-file' , component:UploadFileComponent},
   {path:'dashboard',component:DashboardComponent},
+  
+  
 
 
 ];

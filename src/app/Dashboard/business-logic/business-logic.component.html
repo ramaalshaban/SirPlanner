@@ -1,9 +1,9 @@
-<p-card header="Business Logic" subheader=" {{person.name}}" styleClass="ui-card-shadow"
+<p-card header="Front-End Hatası" subheader=" {{person.name}}" styleClass="ui-card-shadow"
  *ngFor="let bus of business">
     <i class="pi pi-pencil" (click)="showEditPage('Business Logic', bus.content)"></i>
     <div>{{bus.content}}</div>
     <p-footer>
-        <button pButton type="button" label="Ask Question" icon="pi pi-question" (click)="askQuestion()"
+        <button pButton type="button" label="Soru Sor" icon="pi pi-question" (click)="askQuestion()"
             class="ui-button-warning" style="margin-right: .25em"></button>
     </p-footer>
 

@@ -42,18 +42,8 @@
       "projectId": 2
     }
   ],
-  "discussion": [
-    {
-      "id": 1,
-      "name": "Time Out ",
-      "projectId": 1
-    },
-    {
-      "id": 2,
-      "name": "Productivity ",
-      "projectId": 2
-    }
-  ],
+
+  
   "other": [
     {
       "id": 1,
@@ -221,5 +211,20 @@
        "baslik":" Mantık",
       "path":  "../../../assets/word.png"
     }
+  ],
+  "user": [
+    {
+      "userID": 1,
+      "userName":"ebubekir",
+      "email":"ebubekir@gmail.com"
+      
+    },
+    {
+      "userID": 1,
+      "userName":"rama",
+      "email":"rama@gmail.com"
+    }
+    
   ]
+  
 }

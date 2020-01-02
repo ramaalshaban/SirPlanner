@@ -1,3 +1,4 @@
+/*
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from '../../../node_modules/rxjs';
 import { Other } from '../Models/Other';
@@ -30,3 +31,4 @@ export class OtherService {
   }
   
 }
+*/

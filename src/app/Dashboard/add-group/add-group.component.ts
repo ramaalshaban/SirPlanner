@@ -1,31 +1,31 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Person } from 'src/app/Layout/right-menu/Person';
-import { Http } from '@angular/http';
-import { PersonService } from 'src/app/Services/person.service';
+// import { Component, OnInit, Input } from '@angular/core';
+// import { HttpClient } from '@angular/common/http';
+
+// import { Http } from '@angular/http';
+// import { PersonService } from 'src/app/Services/person.service';
 
 
-@Component({
-  selector: 'app-add-group',
-  templateUrl: './add-group.component.html',
-  styleUrls: ['./add-group.component.scss']
-})
-export class AddGroupComponent implements OnInit {
+// @Component({
+//   selector: 'app-add-group',
+//   templateUrl: './add-group.component.html',
+//   styleUrls: ['./add-group.component.scss']
+// })
+// export class AddGroupComponent implements OnInit {
 
-  availablePerson : Person[];
+//   availablePerson : Person[];
   
-  groupPerson : Person[];
+//   groupPerson : Person[];
 
-  GrupName: string[];
+//   GrupName: string[];
  
-  constructor(private http: HttpClient){}
+//   constructor(private http: HttpClient){}
  
   
 
-    ngOnInit() {
-      this.groupPerson =[];
-      this.http.get<any>("http://localhost:3000/person?projectId" + 1).subscribe(person => this.availablePerson  = person);
-    }
+//     ngOnInit() {
+//       this.groupPerson =[];
+//       this.http.get<any>("http://localhost:3000/person?projectId" + 1).subscribe(person => this.availablePerson  = person);
+//     }
   
 
-}
+// }

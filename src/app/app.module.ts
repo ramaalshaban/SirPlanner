@@ -10,6 +10,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { Routes,RouterModule} from '@angular/router';
+
 //primeng
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { ToolbarModule } from 'primeng/toolbar';
@@ -57,19 +59,32 @@ import { ActiveQuestionsComponent } from './Dashboard/active-questions/active-qu
 import { UploadFileComponent } from './Dashboard/upload-file/upload-file.component';
 import { HeaderComponent } from './Layout/header/header.component';
 import { LeftMenuComponent } from './Layout/left-menu/left-menu.component';
-import { RightMenuComponent } from './Layout/right-menu/right-menu.component';
 import { AddPageComponent } from './Dashboard/add-page/add-page.component';
-import { AddPersonComponent } from './Dashboard/add-person/add-person.component';
-import { AddGroupComponent } from './Dashboard/add-group/add-group.component';
+// import { AddPersonComponent } from './Dashboard/add-person/add-person.component';
+// import { AddGroupComponent } from './Dashboard/add-group/add-group.component';
 import { AddProjectComponent } from './Dashboard/add-project/add-project.component';
 import { EditPageComponent } from './Dashboard/edit-page/edit-page.component';
 import { AskQuestionComponent } from './Dashboard/ask-question/ask-question.component';
 import { AnswerComponent } from './Dashboard/answer/answer.component';
-import { AddNewInfoComponent } from './Dashboard/add-new-info/add-new-info.component';
-import { AddNewDiscussionComponent } from './Dashboard/add-new-discussion/add-new-discussion.component';
 import { AddArticleComponent } from './Dashboard/add-article/add-article.component';
-import{DashboardComponent} from './Dashboard/dashboard.component'
+import { DashboardComponent } from './Dashboard/dashboard.component'
 import {LayoutComponent} from './Layout/layout.component';
+import { UserComponent } from './user/user.component';
+import { LoginComponent } from './user/login/login.component';
+import { appRoutes } from './routes';
+import { RegisterComponent} from './user/register/register.component';
+// ********************
+import { HomeComponent} from './Homepage/home.component'
+const routes :Routes=[
+  {path:"login",component:LoginComponent},
+  {path:"register",component:RegisterComponent},
+  {path : 'Home' , component : HomeComponent},
+
+ 
+]
+
+
+
 
 
 @NgModule({
@@ -81,19 +96,25 @@ import {LayoutComponent} from './Layout/layout.component';
     UploadFileComponent,
     HeaderComponent,
     LeftMenuComponent,
-    RightMenuComponent,
+    
     AddPageComponent,
-    AddPersonComponent,
-    AddGroupComponent,
+    // AddPersonComponent,
+    // AddGroupComponent,
     AddProjectComponent,
     EditPageComponent,
     AskQuestionComponent,
     AnswerComponent,
-    AddNewInfoComponent,
-    AddNewDiscussionComponent,
+    
     AddArticleComponent,
     DashboardComponent,
     LayoutComponent,
+    UserComponent,
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent    
+    
+    
+    
    
   ],
   imports: [
@@ -103,7 +124,9 @@ import {LayoutComponent} from './Layout/layout.component';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpModule,
-    HttpClientModule, 
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes), 
+    RouterModule.forRoot(routes),
     
     
     //angular material
@@ -144,14 +167,12 @@ import {LayoutComponent} from './Layout/layout.component';
   bootstrap: [AppComponent],
   entryComponents: [
     AddPageComponent,
-    AddGroupComponent,
-    AddPersonComponent,
+    // AddGroupComponent,
+    // AddPersonComponent,
     AddProjectComponent,
     EditPageComponent,
     AskQuestionComponent,
     AnswerComponent,
-    AddNewInfoComponent,
-    AddNewDiscussionComponent,
     AddArticleComponent
   ]
 })
